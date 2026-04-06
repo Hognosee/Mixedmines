@@ -1,0 +1,11 @@
+language:
+  default: pt_br
+  fallback: en_us
+
+settings:
+  reset-batch-size: 500
+  default-reset-seconds: 300
+
+holograms:
+  enabled: true
+  update-ticks: 40

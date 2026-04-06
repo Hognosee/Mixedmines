@@ -1,0 +1,4 @@
+general:
+  prefix: "&e&lMIXEDMINES &7» "
+  no-permission: "&cNo tienes permiso."
+  only-player: "&cSolo los jugadores pueden usar este comando."

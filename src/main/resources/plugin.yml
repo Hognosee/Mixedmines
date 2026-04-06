@@ -1,0 +1,26 @@
+name: MixedMines
+version: 1.0.0
+main: br.com.mixedmines.MixedMinesPlugin
+author: Hognose
+description: Advanced mines system for Minecraft servers
+
+softdepend:
+  - WorldEdit
+  - FastAsyncWorldEdit
+  - WorldGuard
+  - PlaceholderAPI
+  - HolographicDisplays
+
+commands:
+  mixedmines:
+    description: Main command
+    usage: /mixedmines
+    aliases: [mina, mine]
+
+permissions:
+  mixedmines.admin:
+    default: op
+  mixedmines.use:
+    default: true
+  mixedmines.reload:
+    default: op
