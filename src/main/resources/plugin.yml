@@ -1,19 +1,23 @@
 name: MixedMines
-version: 1.0.0
+version: 2.0.0
 main: br.com.mixedmines.MixedMinesPlugin
 author: Hognose
-description: Advanced mines system for Minecraft servers
+description: Advanced multi-version mines system for Bukkit-compatible servers
 
+# api-version is intentionally omitted: this descriptor must also load on 1.8.8.
+# Modern-only integrations are detected at runtime and remain optional.
 softdepend:
   - WorldEdit
   - FastAsyncWorldEdit
   - WorldGuard
   - PlaceholderAPI
+  - DecentHolograms
   - HolographicDisplays
+  - Vault
 
 commands:
   mixedmines:
-    description: Main command
+    description: Main MixedMines command
     usage: /mixedmines
     aliases: [mina, mine]
 
@@ -23,4 +27,6 @@ permissions:
   mixedmines.use:
     default: true
   mixedmines.reload:
+    default: op
+  mixedmines.bypass:
     default: op
