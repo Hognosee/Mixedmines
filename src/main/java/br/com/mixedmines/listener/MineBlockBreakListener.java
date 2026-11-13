@@ -38,6 +38,7 @@ public class MineBlockBreakListener implements Listener {
                                 new Runnable() {
                                     @Override
                                     public void run() {
+                                        mine.setResetting(false);
                                         MineResetUtil.resetMine(mine);
                                     }
                                 },
