@@ -1,6 +1,7 @@
 package br.com.mixedmines.manager;
 
 import br.com.mixedmines.model.Mine;
+import br.com.mixedmines.platform.MaterialResolver;
 import br.com.mixedmines.util.LocationUtil;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -54,7 +55,7 @@ public class MineManager {
             ConfigurationSection compositionSection = mineSection.getConfigurationSection("composition");
             if (compositionSection != null) {
                 for (String materialName : compositionSection.getKeys(false)) {
-                    Material material = Material.matchMaterial(materialName);
+                    Material material = MaterialResolver.match(materialName);
 
                     if (material != null) {
                         int percent = compositionSection.getInt(materialName);

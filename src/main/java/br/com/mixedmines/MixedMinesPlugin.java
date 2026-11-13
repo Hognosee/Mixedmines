@@ -18,6 +18,7 @@ public class MixedMinesPlugin extends JavaPlugin {
     @Override
     public void onEnable() {
         instance = this;
+        getLogger().info("Detected server platform: " + br.com.mixedmines.platform.ServerPlatform.detect());
 
         saveDefaultConfig();
         this.minesFileManager = new MinesFileManager(this);
@@ -46,6 +47,7 @@ public class MixedMinesPlugin extends JavaPlugin {
     @Override
     public void onDisable() {
         getLogger().info("MixedMines desabilitado.");
+        instance = null;
     }
 
     public void reloadPlugin() {
